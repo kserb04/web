@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/styles/main.css">
+    </head>
+
+    <body>
+      <%- include('./partials/header_home') %>
+          <div id="container-main">
+            <% productsList.forEach(function(item) { %>
+              <div class="container-item">
+                <div class="container-image">
+                  <form action="/cart/add/<%= item.id %>?source=home" method="POST">
+                    <button class="main-button" type="submit">
+                      <input type="image" class="image" src="../images/cart.jpg">
+                    </button>
+                  </form>
+                  <img src="../images/<%= item.image %>" alt="<%= item.name %>" />
+                   <div class="amount" data-productid="${item.productId}">
+                      <p> <%= listQ[item.id]>0 ? listQ[item.id] : null %> </p>
+                   </div>
+                </div>
+                <p class="text2"><%= item.name %></p>
+              </div>
+            <% }); %>
+
+          </div>
+
+          <div class="container-sidebars">
+            <div id="container-sidebar">
+                <% categories.forEach(function(category) { %>
+                    <li class="list"><a href="/getProducts/<%= category %>"> <%= category%></a></li>
+                <% }); %>
+            </div>
+
+            <div class="container-sidebar2">
+              <p>Contact</p>
+              <p>Newsletter</p>
+              <p>Subscribe</p>
+            </div>
+          </div>
+          <div class="container-imageL">
+            <img src="../images/image2.jpg" />
+            <div class="container-hello">
+              <p class="hello"> Welcome! </p>
+              <p class="hello"> Enjoy shopping! </p>
+            </div>
+          </div>
+        </div>
+
+        <%- include('./partials/footer') %>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/styles/cartdesign.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="logo">
+                <img src="/images/logo.png" class="img" onclick="location.href='/home'" />
+                <a href="/home"> Homepage </a>
+            </div>
+            <div id="container-current">
+            </div>
+            <div id="container-icons">
+                <img src="/images/cart.jpg" alt="Cart" id="cart"/>
+                <span id="number"><%= q > 0 ? q : null %></span>
+                <img src="/images/search.png">
+            </div>
+

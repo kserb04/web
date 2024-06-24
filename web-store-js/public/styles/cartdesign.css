@@ -1,0 +1,137 @@
+.container {
+    display: grid;
+    width: 98vw;
+    height: 98vh;
+    grid-template-columns: 20vw 63vw 14vw;
+    grid-template-rows: 10vh 87vh;
+    grid-template-areas:
+        "logo current icons"
+        "cart cart cart";
+    grid-gap: 1rem;
+}
+
+.logo {
+    padding: 0.5em;
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#container-current {
+    grid-area: current;
+    border-radius: 20px;
+    padding-left: 1em;
+    padding-top: 0.5em;
+    font-size: 100%;
+    text-align: center;
+    font-weight: 600;
+}
+
+.container-icons {
+    background: #ADD8E6;
+    grid-area: icons;
+    padding: 1em;
+    border: 2px dashed black;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.zaglavlje {
+    border: 1px dashed blue;
+    grid-area: zaglavlje;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+#cont-cart {
+    border: 2px solid black;
+    grid-area: cart;
+    text-align: center;
+    padding: 1em;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+
+#popis {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px dashed purple;
+    height: 70%;
+    width: 90%;
+    align-self: center;
+    justify-content: center;
+}
+
+img {
+    max-height: 100%;
+}
+
+.cont-print {
+    width: 100%;
+    font-size: xx-large;
+}
+
+#number {
+    font-size: x-large;
+}
+
+#cart-print {
+    font-size: x-large;
+}
+
+.cart-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cart-item .levo {
+    flex: 1;
+}
+
+.cart-item .right {
+    flex: 1;
+}
+
+h1 {
+    font-size: 300%;
+}
+
+#cart-container {
+    width: 100%;
+}
+
+#cart-container th {
+    font-size: xx-large;
+    text-decoration: underline;
+}
+
+#cart-container td {
+    padding: 10px;
+    text-align: center;
+    font-size: xx-large;
+}
+
+.q-cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantity {
+    margin: 0 10px;
+
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

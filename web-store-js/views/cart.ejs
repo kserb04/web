@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/styles/cartdesign.css">
+    </head>
+    <body>
+        <%- include('./partials/header_cart') %>
+            <div id="cont-cart">
+                <h1>CART</h1>
+                    <table id="cart-container">
+                        <thead>
+                            <tr>
+                                <th>PRODUCT NAME</th>
+                                <th>AMOUNT</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cart-body">
+                            <% cartItems.forEach(function(item) { %>
+                                <tr>
+                                    <td><%= item.name %></td>
+                                    <td>
+                                        <div class="q-cont">
+                                            <form action="/cart/add/<%= item.id %>?source=cart" method="POST">
+                                                <button type="submit">+</button>
+                                            </form>
+                                            <span class="quantity"><%= item.quantity %></span>
+                                            <form action="/cart/remove/<%= item.id %>" method="POST">
+                                                <button type="submit">-</button>
+                                            </form>
+                                        </div>
+                                    </td>
+                                </tr>
+                            <% }); %>
+                        </tbody>
+                    </table>
+            </div>
+        </div>
+
+        <%- include('./partials/footer') %>
+    </body>
+</html>
