@@ -1,0 +1,240 @@
+@media screen and (min-width: 1024px) {
+  .container {
+    display: grid;
+    width: 98vw;
+    height: 98vh;
+    grid-template-columns: 20vw 63vw 14vw;
+    grid-template-rows: 10vh 30vh 20vh 37vh;
+    grid-template-areas:
+      "logo trenutno ikone"
+      "sidebar slikaV slikaV"
+      "sidebar slikaV slikaV"
+      "sidebar main main";
+    grid-gap: 0.5em;
+  }
+  .logo {
+    padding: 0.5em;
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .container {
+    height: 100vh;
+    display: grid;
+    width: 100vw;
+    grid-template-columns: 20vw 40vw 40vw;
+    grid-template-rows: 10vh 10vh 35vh 50vh 15vh;
+    grid-template-areas:
+      "logo logo logo"
+      "trenutno trenutno ikone"
+      "slikaV slikaV slikaV"
+      "sidebar main main"
+      "sidebar2 main main";
+    grid-gap: 0.5rem;
+  }
+  .logo {
+    padding: 0.5em;
+    grid-area: logo;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+}
+
+img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.naslov {
+  font-size: 1rem;
+}
+
+.header {
+  background: #333333;
+  grid-area: header;
+}
+
+#container-trenutno {
+  background: #e0ddd9;
+  grid-area: trenutno;
+  border-radius: 20px;
+  padding-left: 1em;
+  padding-top: 0.5em;
+  font-size: 300%;
+  text-align: center;
+  font-weight: 600;
+}
+
+.tekst {
+  font-size: x-large;
+  text-align: left;
+}
+
+.container-ikone {
+  background: #add8e6;
+  grid-area: ikone;
+  padding: 1em;
+  border: 2px dashed black;
+  display: flex;
+  flex-wrap: nowrap;
+
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#kos,
+#search {
+  max-width: 50%;
+  height: auto;
+}
+
+.container-sidebars {
+  display: flex;
+  flex-direction: column;
+  grid-area: sidebar;
+}
+
+#container-sidebar {
+  background: #e0ddd9;
+  border-radius: 20px;
+  white-space: pre-line;
+  margin-bottom: 3em;
+  padding-top: 1em;
+  padding-left: 2em;
+  height: fit-content;
+  font-size: 70%;
+}
+
+.container-sidebar2 {
+  padding: 1em;
+  border-radius: 20px;
+  background: #e0ddd9;
+  align-self: center;
+  justify-self: center;
+  font-size: 150%;
+}
+
+.container-content3 {
+  background: blue;
+  grid-area: content3;
+}
+
+.container-slikaVelika {
+  position: relative;
+  grid-area: slikaV;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.container-pozdrav {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  display: block;
+  height: fit-content;
+  width: fit-content;
+  max-width: 50%;
+  border: 1px solid #e0ddd9;
+  border-radius: 20px;
+  border-radius: 20px;
+  padding: 1em;
+  z-index: 1;
+  font-size: x-large;
+  backdrop-filter: blur(100px);
+}
+
+.pozdrav {
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#container-main {
+  max-width: 100%;
+  max-height: 100%;
+  grid-area: main;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1em;
+  text-align: center;
+  justify-content: start;
+  align-items: center;
+}
+
+.container-proizvod {
+  height: 70%;
+  width: 23%;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+
+.container-slika {
+  position: relative;
+  max-width: 100%;
+  height: 70%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.slika {
+  position: absolute;
+  bottom: 10%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  height: 40%;
+  width: auto;
+  display: flex;
+  justify-self: center;
+}
+
+.container-slika:hover .slika {
+  opacity: 1;
+}
+
+.container-tekst {
+  text-align: center;
+}
+
+.lista {
+  list-style: none;
+  line-height: 1;
+  font-size: xx-large;
+  font-weight: 500;
+}
+
+.tekst2 {
+  text-align: center;
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+#broj2 {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.kol {
+  position: absolute;
+  bottom: 0;
+  right: 0.5em;
+  width: 1.5em;
+  height: 1.5em;
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#broj {
+  font-size: x-large;
+}
+

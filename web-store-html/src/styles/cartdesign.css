@@ -1,0 +1,118 @@
+.container {
+    display: grid;
+    width: 98vw;
+    height: 98vh;
+    grid-template-columns: 20vw 63vw 14vw;
+    grid-template-rows: 10vh 87vh;
+    grid-template-areas: 
+        "logo trenutno ikone"
+        "kosarica kosarica kosarica";
+    grid-gap: 1rem;
+}
+
+.logo {
+    padding: 0.5em;
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-trenutno {
+    background: purple;
+    grid-area: trenutno;
+    padding-left: 1em;
+    font-size: xx-large;
+    text-align: center;
+    font-weight: 600;
+}
+
+.container-ikone {
+    background: #ADD8E6;
+    grid-area: ikone;
+    padding: 1em;
+    border: 2px dashed black;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.zaglavlje {
+    border: 1px dashed blue;
+    grid-area: zaglavlje;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+#cont-kosarica { 
+    border: 2px solid black;
+    grid-area: kosarica;
+    text-align: center;
+    padding: 1em;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+
+#popis {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px dashed purple;
+    height: 70%;
+    width: 90%;
+    align-self: center;
+    justify-content: center;
+}
+
+img {
+    max-height: 100%;
+}
+
+.cont-ispis {
+    width: 100%;
+    font-size: xx-large;
+}
+
+#broj {
+    font-size: x-large;
+}
+
+#kosarica-ispis {
+    font-size: x-large;
+}
+
+.cart-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cart-item .levo {
+    flex: 1;
+}
+
+.cart-item .right {
+    flex: 1;
+}
+
+h1 {
+    font-size: 300%;
+}
+
+#cart-container {
+    width: 100%;
+}
+
+#cart-container th {
+    font-size: xx-large;
+    text-decoration: underline;
+}
+
+#cart-container td {
+    padding: 10px;
+    text-align: center;
+    font-size: xx-large;
+}

@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./styles/cartdesign.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <img src="./images/logo.png" class="img" />
+      </div>
+      <div id="container-trenutno"></div>
+      <div id="container-ikone">
+        <img src="./images/cart.jpg" id="kos" />
+        <span id="number"></span>
+        <img src="./images/search.png" />
+      </div>
+      <div id="cont-kosarica">
+        <h1>KOŠARICA</h1>
+        <table id="cart-container">
+          <thead>
+            <tr>
+              <th>NAZIV PROIZVODA</th>
+              <th>KOLIČINA</th>
+            </tr>
+          </thead>
+          <tbody id="cart-body"></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="./scripts/common.js"></script>
+    <script src="./scripts/forcart.js"></script>
+  </body>
+</html>
+
