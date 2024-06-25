@@ -3,7 +3,6 @@
     <head>
         <link rel="stylesheet" href="/styles/main.css">
     </head>
-
     <body>
       <%- include('./partials/header_home') %>
           <div id="container-main">
@@ -23,9 +22,7 @@
                 <p class="text2"><%= item.name %></p>
               </div>
             <% }); %>
-
           </div>
-
           <div class="container-sidebars">
             <div id="container-sidebar">
                 <% categories.forEach(function(category) { %>
@@ -39,15 +36,13 @@
               <p>Subscribe</p>
             </div>
           </div>
-          <div class="container-imageL">
+          <div class="container-imageLarge">
             <img src="../images/image2.jpg" />
             <div class="container-hello">
               <p class="hello"> Welcome! </p>
               <p class="hello"> Enjoy shopping! </p>
             </div>
           </div>
-        </div>
-
         <%- include('./partials/footer') %>
     </body>
 </html>
